@@ -216,23 +216,23 @@ Huom! Kun koneen IP:n määrittelee edellä olevalla tavalla kone näkyy Intrins
 
 Luo paketti komennolla:
 
-   vagrant package
+	vagrant package
 
 Tämä luo package.box -nimisen tiedoston. Jos haluat kloonata koneen jollekin muulle isäntäkoneelle niin siirrä tässä vaiheessa package.box -tiedosto sille koneelle.
 
 Liitä paketti boksiksi:
 
-   vagrant box add omaboksi package.box
+	vagrant box add omaboksi package.box
 
 Alusta uusi virtuaalikone komennolla (mene ensin uuteen hakemistoon):
 
-   vagrant init omaboksi
+	vagrant init omaboksi
 
 Tällä tavalla saa kopioitua virtuaalikoneen koko sisällön asennuksineen, asetuksineen ja tietosisältöineen! :D
 
 Isäntäkoneelle asennetut boxit näkee näin:
 
-   vagrant box list
+	vagrant box list
 
 # Ratkaisuja ongelmiin 
 
