@@ -119,7 +119,7 @@ Hävitä "heppa" -virtuaalikone:
 
 --delete lippu tuhoaa kaikki virtuaalikoneeseen liittyvät tiedostot ja levykuvat isäntäkoneen levyltä. Käytä sitä jos haluat lopullisesti eroon virtuaalikoneesta ja kaikesta siihen liittyvästä.
 
-= Vagrant =
+# Vagrant
 
 Vagrant (https://www.vagrantup.com/) on VirtualBoxin päällä pyörivä kehitysympäristö, jonka avulla voi ajaa ns. boxeja, laatikoita, jotka kuvaavat tietyn virtuaalikoneen tietyllä käyttöjärjestelmällä ja ohjelmakokoonpanolla. Boxeja voi ladata netistä valmiina tai luoda itse omaan tarpeeseen sopiva.
 
@@ -272,7 +272,7 @@ Jos tulee seuraavanlaista virheilmoitusta niin VirtualBoxin uudelleenasennuksen 
 
 Viritä Vagrantin päällä pyörivää virtuaalikonetta turvallisemmaksi näillä toimenpiteillä:
 
-*Vagrant-virtuaalikoneella on automaattisesti käyttäjä "vagrant" jolla salasana "vagrant". Tämä salasana pitää muuttaa vaikeammin arvattavaksi (ja käyttäjänimikin olisi hyvä vaihtaa).
-*Jaetut kansiot ovat tietoturvariski, joten jos niitä ei välttämättä tarvita, ne tulee olla pois päältä.
+* Vagrant-virtuaalikoneella on automaattisesti käyttäjä "vagrant" jolla salasana "vagrant". Tämä salasana pitää muuttaa vaikeammin arvattavaksi (ja käyttäjänimikin olisi hyvä vaihtaa).
+* Jaetut kansiot ovat tietoturvariski, joten jos niitä ei välttämättä tarvita, ne tulee olla pois päältä.
 
 Ylipäänsä Vagranttia kannattaisi käyttää vain softakehitykseen, ei tuotantoympäristönä eikä jatkuvasti päällä olevana ympäristönä.
