@@ -24,7 +24,7 @@ VirtualBox ei asenna valmiiksi käyttiksiä, vaan ne pitää asentaa samalla tav
 
 Huom! Kun asennat VirtualBoxia Ubuntun päälle katso ohjeet virtualboxin sivulta (https://www.virtualbox.org/wiki/Linux_Downloads) kohdasta "Debian-based Linux distributions".
 
-VirtualBox tukee virtuaalisia Windows-koneita, mutta ilmaisversio ei tue RDP-yhteyttä, joten Windows-palvelinten virtualisointiin VirtualBoxia ei kannata käyttää (VirtualBoxin maksullinen versio on erittäin kallis). Windows-koneiden virtualisointiin yksi vaihtoehto on Windows-palvelinkäyttöjärjestelmiin ja työasemakäyttisten professional-versioihin sisältyvä Hyper-V. Hyper-V on asennettuna palvelimella Kaniini.
+VirtualBox tukee virtuaalisia Windows-koneita, mutta ilmaisversio ei tue RDP-yhteyttä, joten Windows-palvelinten virtualisointiin VirtualBoxia ei kannata käyttää (VirtualBoxin maksullinen versio on erittäin kallis).
 
 Huom! RDP-yhteydet toimivat VirtualBoxissa ainakin Windows Server 2012 Standardilla oikeilla nettiasetuksilla (Bridged Adapter)!
 
