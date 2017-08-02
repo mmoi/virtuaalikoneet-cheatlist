@@ -53,31 +53,31 @@ Virtuaalikoneiden hallintaan komentoriviltä (jos haluaa hallinnoida palvelinta 
 
 Näytä kaikki virtuaalikoneet:
 
- vboxmanage list vms
+   vboxmanage list vms
 
 Näytä käynnistä olevat virtuaalikoneet:
 
- vboxmanage list runningvms
+   vboxmanage list runningvms
 
 Näytä virtuaalikoneen nimeltä "heppa" tiedot:
 
- vboxmanage showvminfo heppa
+   vboxmanage showvminfo heppa
 
 ## Käynnistys
 
 Käynnistä "heppa" -niminen virtuaalikone (heppa:n pitää olla luotuna). "--type headless" vivulla virtuaalikone käynnistyy taustalle eikä luo ikkunoita isäntäkoneen ikkunointijärjestelmään. (Jos isäntäkoneessa ei ole näyttöä kiinni ei edes käynnisty ilman headless -vipua.)
 
- vboxmanage startvm heppa --type headless
+   vboxmanage startvm heppa --type headless
 
 ## Sammutus
 
 Sammuta hallitusti lähettämällä shutdown-käsky:
 
- vboxmanage controlvm koneen-nimi acpipowerbutton
+   vboxmanage controlvm koneen-nimi acpipowerbutton
 
 Pakota sammutus (virtuaalinen pistoke irti seinästä -toimenpide):
 
- vboxmanage controlvm koneen-nimi poweroff
+   vboxmanage controlvm koneen-nimi poweroff
 
 (Huom. Hallittu sammutus sammutti koneen vasta sammutusviiveen jälkeen jos kone oli käynnistetty ilman "--type headless" optiota, joten kannattaa käyttää sitä koneita käynnisteltäessä...)
 
@@ -85,11 +85,11 @@ Pakota sammutus (virtuaalinen pistoke irti seinästä -toimenpide):
 
 Tee "heppa" -virtuaalikoneesta klooni nimeltä "noppa":
 
- vboxmanage clonevm heppa --name noppa
+   vboxmanage clonevm heppa --name noppa
 
 Rekisteröi klooni:
 
- vboxmanage registervm /home/vm-admin/vms/noppa/noppa.vbox
+   vboxmanage registervm /home/vm-admin/vms/noppa/noppa.vbox
 
 Koneet pitää aina rekisteröidä jotta ne näkyvät VirtualBoxin listoilla.
 
@@ -99,13 +99,13 @@ Huom! Kloonatessa kannattaa varmistaa että virtuaalisten verkkokorttien MAC-oso
 
 Luo "heppa" -niminen virtuaalikone:
 
- vboxmanage createvm --name heppa
+   vboxmanage createvm --name heppa
 
 Käytännössä luontikomento luo heppa/heppa.vbox -nimisen tiedoston.
 
 Uuden koneen rekisteröinti tapahtuu näin:
 
- vboxmanage registervm /home/vm-admin/vms/heppa/heppa.vbox
+   vboxmanage registervm /home/vm-admin/vms/heppa/heppa.vbox
 
 Tämän jälkeen kone näkyy VirtualBox -ohjelmassa.
 
@@ -115,7 +115,7 @@ Huom! Koneiden luomisen jälkeen ne pitää konfiguroida. Se on paljon helpompaa
 
 Hävitä "heppa" -virtuaalikone:
 
- vboxmanage unregistervm heppa --delete
+   vboxmanage unregistervm heppa --delete
 
 --delete lippu tuhoaa kaikki virtuaalikoneeseen liittyvät tiedostot ja levykuvat isäntäkoneen levyltä. Käytä sitä jos haluat lopullisesti eroon virtuaalikoneesta ja kaikesta siihen liittyvästä.
 
@@ -141,19 +141,19 @@ Huom! Vagrant -asennus on oletuksena varsin tietoturvaton! Ks. kohta tietoturva.
 
 Luo virtuaalikone:
 
- vagrant init
+   vagrant init
 
 Luo Vagrantfile -nimisen tiedoston, jota muokkaamalla voi muuttaa VM:n asetuksia.
 
 Luo virtuaalikone valmiiksi määritellyllä kokoonpanolla (tässä tapauksessa Ubuntu 14.04):
 
- vagrant init ubuntu/trusty64
+   vagrant init ubuntu/trusty64
 
 Valmiita laatikoita eli "boxeja" voi kelailla täältä: https://atlas.hashicorp.com/boxes/search.
 
 Käynnistä virtuaalikone:
 
- vagrant up
+   vagrant up
 
 Käynnistää virtuaalikoneen. (Tässä voi ensimmäisellä kerralla kestää kahvitauon verran varsinkin jos käytetään jotain boxia joka täytyy ladata netistä.)
 
@@ -161,7 +161,7 @@ Käynnistää virtuaalikoneen. (Tässä voi ensimmäisellä kerralla kestää ka
 
 Avaa SSH -yhteys virtuaalikoneelle:
 
- vagrant ssh
+   vagrant ssh
 
 Ottaa ssh-yhteyden virtuaalipalvelimelle (Windowsissa täytyy olla asennettuna ssh clientti, joka toimii komentoriviltä, esim. Cygwin tai openssh).
 
@@ -171,12 +171,12 @@ Oletuksena uuden virtuaalikoneen käyttäjänimi on "vagrant" ja salasana "vagra
 
 Vagrantissa voi luoda oman jaetun kansion laittamalla seuraavan rivin asetustiedostoon (Vagrantfile). Ensimmäinen parametri on polku paikallisen koneen (isäntäkoneen) hakemistoon ja seuraava parametri on polku virtuaalikoneen (vieraskoneen) hakemistoon. Esimerkiksi tässä tapauksessa Apachen oletusjuurihakemisto /var/www/html.
 
- # Vagrantfile
- Vagrant.configure(2) do |config|
-  ...
-   config.vm.synced_folder "./testi", "/var/www/html/testi"
-  ...
- end
+# Vagrantfile
+   Vagrant.configure(2) do |config|
+   ...
+      config.vm.synced_folder "./testi", "/var/www/html/testi"
+   ...
+   end
 
 # Verkkoyhteydet 
 
@@ -192,17 +192,17 @@ Lisää Vagrantfile:en seuraava rivi:
 
 Tämän jälkeen käynnistä VM uudelleen käskyllä:
 
- vagrant reload
+   vagrant reload
 
 Kun VM on taas pystyssä mene isäntäkoneen selaimella osoitteeseen 127.0.0.1:8888. Siellä pitäisi näkyä virtuaalikoneen palvelimen antama vastaus. Testaa vieraskoneella että sen HTTP-palvelin pyörii esim. seuraavalla käskyllä:
 
- curl 127.0.0.1:80
+   curl 127.0.0.1:80
 
 ## Staattinen IP
 
 Seuraavalla rimpsulla Vagrantfilessä saa vieraskoneen näkymään verkossa omalla ip-osoitteellaan:
 
- config.vm.network "public_network", ip: "195.156.114.109"
+   config.vm.network "public_network", ip: "195.156.114.109"
 
 *Anna sellainen IP-numero jota ei ole vielä varattu minkään muun koneen käyttöön.
 *Porttivälitys ei toimi jos ip-osoite on määritelty näin (eikä sitä kyllä tarvitakaan)
@@ -216,23 +216,23 @@ Huom! Kun koneen IP:n määrittelee edellä olevalla tavalla kone näkyy Intrins
 
 Luo paketti komennolla:
 
- vagrant package
+   vagrant package
 
 Tämä luo package.box -nimisen tiedoston. Jos haluat kloonata koneen jollekin muulle isäntäkoneelle niin siirrä tässä vaiheessa package.box -tiedosto sille koneelle.
 
 Liitä paketti boksiksi:
 
- vagrant box add omaboksi package.box
+   vagrant box add omaboksi package.box
 
 Alusta uusi virtuaalikone komennolla (mene ensin uuteen hakemistoon):
 
- vagrant init omaboksi
+   vagrant init omaboksi
 
 Tällä tavalla saa kopioitua virtuaalikoneen koko sisällön asennuksineen, asetuksineen ja tietosisältöineen! :D
 
 Isäntäkoneelle asennetut boxit näkee näin:
 
- vagrant box list
+   vagrant box list
 
 # Ratkaisuja ongelmiin 
 
@@ -243,13 +243,13 @@ Jos virtuaalikoneet eivät pyöri, laita BIOS:sista päälle VT-x ja VT-d tuet. 
 ## Guest additions do not match
 
 Jos VM antaa tällaista virhettä:
- Checking for guest additions in VM...
-    default: The guest additions on this VM do not match the installed version of
-    default: VirtualBox! In most cases this is fine, but in rare cases it can
-    default: prevent things such as shared folders from working properly. If you see
-    default: shared folder errors, please make sure the guest additions within the
-    default: virtual machine match the version of VirtualBox you have installed on
-    default: your host and reload your VM.
+   Checking for guest additions in VM...
+   default: The guest additions on this VM do not match the installed version of
+   default: VirtualBox! In most cases this is fine, but in rare cases it can
+   default: prevent things such as shared folders from working properly. If you see
+   default: shared folder errors, please make sure the guest additions within the
+   default: virtual machine match the version of VirtualBox you have installed on
+   default: your host and reload your VM.
 
 Asenna plugin vagrant-vbguest.
 
@@ -259,14 +259,14 @@ Lisäohjeita: http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-ad
 
 Jos tulee seuraavanlaista virheilmoitusta niin VirtualBoxin uudelleenasennuksen pitäisi auttaa. VirtualBoxin ja Vagrantin välillä on ilmeisesti tapahtunut jotain...
 
- There was an error while executing `VBoxManage`, a CLI used by Vagrant
- for controlling VirtualBox. The command and stderr is shown below.
- 
- Command: ["e4794f74-f830-40b1-8bc8-2ab889961281", "--type", "headless"]("startvm",)
- 
- Stderr: VBoxManage.exe: error: The virtual machine 'wpscot_default_1486540637575_79092' has terminated unexpectedly
- during startup with exit code 1 (0x1).  More details may be available in 'C:\VirtualBox VMs\machine\Logs\VBoxHardening.log'
- VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component MachineWrap, interface IMachine
+   There was an error while executing `VBoxManage`, a CLI used by Vagrant
+   for controlling VirtualBox. The command and stderr is shown below.
+   
+   Command: ["e4794f74-f830-40b1-8bc8-2ab889961281", "--type", "headless"]("startvm",)
+   
+   Stderr: VBoxManage.exe: error: The virtual machine 'wpscot_default_1486540637575_79092' has terminated unexpectedly
+   during startup with exit code 1 (0x1).  More details may be available in 'C:\VirtualBox VMs\machine\Logs\VBoxHardening.log'
+   VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component MachineWrap, interface IMachine
 
 # Tietoturva 
 
