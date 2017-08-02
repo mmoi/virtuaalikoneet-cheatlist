@@ -207,7 +207,7 @@ Seuraavalla rimpsulla Vagrantfilessä saa vieraskoneen näkymään verkossa omal
 *Anna sellainen IP-numero jota ei ole vielä varattu minkään muun koneen käyttöön.
 *Porttivälitys ei toimi jos ip-osoite on määritelty näin (eikä sitä kyllä tarvitakaan)
 
-Huom! Kun koneen IP:n määrittelee edellä olevalla tavalla kone näkyy Intrinsicin sisäverkossa muille koneille mutta sisäverkon ulkopuolelle kone näkyy isäntäkoneen IP:llä. Jos halutaan kone näkymään ulkopuolelle omalla osoitteellaan (esim. Pacius) sain sen näkymään ainakin näin:
+Huom! Kun koneen IP:n määrittelee edellä olevalla tavalla kone näkyy sisäverkossa muille koneille mutta sisäverkon ulkopuolelle kone näkyy isäntäkoneen IP:llä. Jos halutaan kone näkymään ulkopuolelle omalla osoitteellaan sain sen näkymään ainakin näin:
 
 *Virtualboxin verkkoasetuksista valitaan vaihtoehto "Bridged"
 *Koneen sisäiset verkkoasetukset määritellään käsin (IP, aliverkon peite, oletusyhdyskäytävä ja DNS-palvelimet)
