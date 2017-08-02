@@ -53,15 +53,15 @@ Virtuaalikoneiden hallintaan komentoriviltä (jos haluaa hallinnoida palvelinta 
 
 Näytä kaikki virtuaalikoneet:
 
-   vboxmanage list vms
+	vboxmanage list vms
 
 Näytä käynnistä olevat virtuaalikoneet:
 
-   vboxmanage list runningvms
+	vboxmanage list runningvms
 
 Näytä virtuaalikoneen nimeltä "heppa" tiedot:
 
-   vboxmanage showvminfo heppa
+	vboxmanage showvminfo heppa
 
 ## Käynnistys
 
